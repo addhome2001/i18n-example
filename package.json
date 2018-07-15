@@ -1,0 +1,32 @@
+{
+  "name": "i18n-example",
+  "version": "1.0.0",
+  "description": "a example for i18n",
+  "main": "index.js",
+  "repository": "git@github.com:addhome2001/i18n-example.git",
+  "author": "Seven <addhome2001@yahoo.com.tw>",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-serve --content ttag/dist --open --config ttag/webpack.config.js",
+    "start-default": "LOCALE=default yarn start",
+    "start-zh": "LOCALE=zh yarn start",
+    "build": "yarn build-default && yarn build-zh",
+    "build-default": "LOCALE=default yarn compile",
+    "build-zh": "LOCALE=zh yarn compile",
+    "extract": "webpack --env.extract --config ttag/webpack.config.js",
+    "compile": "webpack --mode production --config ttag/webpack.config.js"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-ttag": "^1.0.3",
+    "babel-preset-env": "^1.7.0",
+    "gettext-parser": "^1.3.1",
+    "json-loader": "^0.5.7",
+    "po-gettext-loader": "^0.1.1",
+    "ttag": "^1.0.3",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-serve": "^1.0.4"
+  }
+}

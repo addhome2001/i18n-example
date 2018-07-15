@@ -1,0 +1,14 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: ttag/app.js:7
+msgid "Hi, all."
+msgstr ""
+
+#: ttag/app.js:8
+msgid "Duration on this page: ${ duration } second"
+msgid_plural "Duration on this page: ${ duration } seconds"
+msgstr[0] ""
+msgstr[1] ""

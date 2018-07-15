@@ -1,0 +1,21 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"Project-Id-Version: i 18n-example\n"
+"PO-Revision-Date: 2018-07-08 16:47+0800\n"
+"Last-Translator: seven <addhome2001@gmail.com>\n"
+"Language-Team: Chinese\n"
+"Language: zh\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ttag/app.js:7
+msgid "Hi, all."
+msgstr "嗨, 大家好"
+
+#: ttag/app.js:8
+msgid "Duration on this page: ${ duration } second"
+msgid_plural "Duration on this page: ${ duration } seconds"
+msgstr[0] "在這頁面只停留: ${ duration } 秒"
+msgstr[1] "在這頁面已經停留: ${ duration } 秒"

@@ -1,9 +1,11 @@
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = ({ extract } = {}) => {
   const isDev = !!process.env.WEBPACK_SERVE;
   const locale = process.env.LOCALE || 'default';
+  const localePrefix = !isDev ? `_${locale}` : '';
   const ttag = {};
 
   if (extract) {
@@ -24,7 +26,7 @@ module.exports = ({ extract } = {}) => {
     output: {
       path: path.resolve(__dirname, './dist'),
       // the output filename is related to the locale
-      filename: !isDev ? `app_${locale}.js` : 'app.js',
+      filename: `app${localePrefix}.js`,
       publicPath: path.resolve(__dirname, './dist')
     },
     devServer: {
@@ -41,6 +43,13 @@ module.exports = ({ extract } = {}) => {
       new webpack.DefinePlugin({
         LOCALE: JSON.stringify(locale),
         IS_DEV: JSON.stringify(isDev),
+      }),
+      new HtmlWebpackPlugin({
+        title: `Webpack with ttag demo`,
+        template: path.resolve(__dirname, './template/index.html'),
+        filename: path.resolve(__dirname, `./dist/index${localePrefix}.html`),
+        inject: false,
+        localePrefix,
       }),
     ],
     module: {

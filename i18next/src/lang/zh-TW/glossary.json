@@ -1,0 +1,5 @@
+{
+  "title": "你好, {{name}}",
+  "duration": "在這頁停留{{count}}秒",
+  "duration_plural": "在這頁停留{{count}}秒（複數）"
+}

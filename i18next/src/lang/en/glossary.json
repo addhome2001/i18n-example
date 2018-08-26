@@ -1,0 +1,5 @@
+{
+  "title": "Hi, {{name}}",
+  "duration": "Duration on this page: {{count}} second",
+  "duration_plural": "Duration on this page: {{count}} seconds"
+}
